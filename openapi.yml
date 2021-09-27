@@ -1,0 +1,26 @@
+openapi: 3.1.0
+info:
+  title: Pagaleve Test API
+  description: Pagaleve Test API endpoints
+  version: 1.0.0
+servers:
+  - description: Development server
+    url: "https://o7aeag5f6f.execute-api.us-east-1.amazonaws.com"
+paths:
+  /pagaleve/token:
+    post:
+      summary: Returns a valid Pagaleve token
+      description: Generates a token used to authenticate with Pagaleve API
+      operationId: pagaleveToken
+      tags:
+        - pagaleve
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
